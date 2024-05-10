@@ -10,5 +10,9 @@ for item in question_data:
     question = Question(text,answer)
     question_bank.append(question)
 
-while still_has_questions():
-    next_question()
+quiz = QuizBrain(question_bank)
+
+while quiz.still_has_questions():
+    quiz.next_question()
+    quiz.question_number += 1
+    print(quiz.score)
