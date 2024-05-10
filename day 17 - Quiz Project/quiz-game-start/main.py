@@ -10,5 +10,5 @@ for item in question_data:
     question = Question(text,answer)
     question_bank.append(question)
 
-game = QuizBrain(question_bank)
-game.next_question()
+while still_has_questions():
+    next_question()
