@@ -17,8 +17,10 @@ filtered_rgb_list = [rgb for rgb in rgb_list if not (rgb[0] > 200 and rgb[1] > 2
 timmy = Turtle()
 screen = Screen()
 screen.colormode(255)
+timmy.hideturtle()
 timmy.penup()
 timmy.setpos(-200,-100)
+
 def make_dots_in_row():
         for _ in range(10):
             dot_color = choice(filtered_rgb_list)
