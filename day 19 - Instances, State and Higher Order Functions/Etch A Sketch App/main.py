@@ -15,12 +15,18 @@ def turn_left():
 def turn_right():
     tim.right(5)
 
+def clear():
+    tim.clear()
+    tim.penup()
+    tim.home()
+    tim.pendown()
 
 screen.listen()
 
-screen.onkey(move_forwards, "w")
-screen.onkey(move_backwards, "s")
-screen.onkey(turn_left, "a")
-screen.onkey(turn_right, "d")
+screen.onkeypress(move_forwards, "w")
+screen.onkeypress(move_backwards, "s")
+screen.onkeypress(turn_left, "a")
+screen.onkeypress(turn_right, "d")
+screen.onkey(clear, "c")
 
 screen.exitonclick()
